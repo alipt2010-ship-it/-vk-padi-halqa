@@ -1,68 +1,65 @@
-<section>
-<h2>👥 അംഗങ്ങൾ</h2>
-
-<div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
-
-<div style="text-align:center;">
-<img src="1000010803.jpeg" width="150">
-<p><b>Salih A</b></p>
-</div>
-
-<div style="text-align:center;">
-<img src="IMG_0029.jpeg" width="150">
-<p><b>Hassan Kutty</b></p>
-</div>
-
-<div style="text-align:center;">
-<img src="IMG_0152.png" width="150">
-<p><b>Saidalavi</b></p>
-</div>
-
-<div style="text-align:center;">
-<img src="c9407d01-07fa-40a3-9e85-4469ee89a445.jpeg" width="150">
-<p><b>Moideen Kutty</b></p>
-</div>
-
-</div>
-</section>
-
-</div>
-</section>
+<!DOCTYPE html>
+<html lang="ml">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>V K Padi Halqa</title>
 
 <style>
 body{
-    font-family: Arial, sans-serif;
+    font-family:Arial,sans-serif;
     margin:0;
     background:#f5f5f5;
 }
+
 header{
     background:#0d6efd;
     color:white;
-    padding:20px;
     text-align:center;
+    padding:25px;
 }
+
 section{
     background:white;
     margin:15px;
-    padding:15px;
+    padding:20px;
     border-radius:10px;
 }
+
 table{
     width:100%;
     border-collapse:collapse;
 }
-th,td{
-    border:1px solid #ddd;
-    padding:8px;
-    text-align:center;
-}
+
 th{
     background:#0d6efd;
     color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+.members{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.member{
+    text-align:center;
+}
+
+.member img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #0d6efd;
 }
 </style>
 </head>
@@ -76,14 +73,13 @@ th{
 
 <section>
 <h2>📢 അറിയിപ്പുകൾ</h2>
-<p id="meeting"></p>
+<p>അടുത്ത വെള്ളിയാഴ്ച വൈകുന്നേരം 4 മണിക്ക് യോഗം.</p>
 </section>
 
 <section>
 <h2>📊 മാസ കണക്ക്</h2>
 
-<p><strong>പഴയ ബാലൻസ്:</strong>
-<span id="old_balance"></span></p>
+<p><b>പഴയ ബാലൻസ്:</b> ₹2763</p>
 
 <table>
 <tr>
@@ -94,27 +90,42 @@ th{
 </tr>
 
 <tr>
-<td id="month"></td>
-<td id="income"></td>
-<td id="expense"></td>
-<td id="balance"></td>
+<td>മേയ് 2026</td>
+<td>₹690</td>
+<td>₹541</td>
+<td>₹2912</td>
 </tr>
-</table>
 
+</table>
 </section>
 
-<script>
-fetch("data.json")
-.then(response => response.json())
-.then(data => {
-document.getElementById("meeting").innerText = data.meeting;
-document.getElementById("old_balance").innerText = "₹" + data.old_balance;
-document.getElementById("month").innerText = data.month;
-document.getElementById("income").innerText = "₹" + data.income;
-document.getElementById("expense").innerText = "₹" + data.expense;
-document.getElementById("balance").innerText = "₹" + data.balance;
-});
-</script>
+<section>
+<h2>👥 അംഗങ്ങൾ</h2>
+
+<div class="members">
+
+<div class="member">
+<img src="1000010803.jpeg">
+<p><b>Salih A</b></p>
+</div>
+
+<div class="member">
+<img src="IMG_0029.jpeg">
+<p><b>Hassan Kutty</b></p>
+</div>
+
+<div class="member">
+<img src="IMG_0152.png">
+<p><b>Saidalavi</b></p>
+</div>
+
+<div class="member">
+<img src="c9407d01-07fa-40a3-9e85-4469ee89a445.jpeg">
+<p><b>Moideen Kutty</b></p>
+</div>
+
+</div>
+</section>
 
 </body>
 </html>
